@@ -1,0 +1,98 @@
+//Templates
+
+Introduction
+
+>> When a class with particular type data member or function with particular type argument is defined, it will work for specified data type only. For example if we define a function to swap two values of float type, then we can't use this function to swap two characters, In this case, we have to define separate function to handle each data type. Thus, we have to define separate version of function due to different data type, even each has handle different data types. The generic family of classes or functions is known as template. In case  of template, we define class or function is defined with general data type and it is replaced by a specified data type at the time of actual use of use of the class or function, It is sometimes called parameterized class or function.
+
+/* Type of templates
+1) Function Template
+2) class Template
+
+>> Function Template
+>> it is used to define a function to handle arguments of different  types in different times. Using function template, we can use same function for arguments of one data type in some cases and arguments of other types in other cases, for example, we can define a function which can be used to add two integer or fractional or double numbers, Defining a function template contains two steps:
+
+1) Defining General Data Type:
+
+   template <class template_name>
+
+2) Defining a function with general data type
+
+    return_type function_name(arguments_with_template_name)
+    {
+    //Body of function with type template_nem whenever approprate)
+
+    }
+
+    When compiler encounter a call to such general functions, it identifies the data type used in actual arguments and implements the function for that data type. This avoids overhead of rewriting a function having body of same pattern but operating for different data types.
+
+
+    // Function template with multiple parameters
+
+    We can use more than one generic data types in function template. They aer declared as comma separated list in following way:
+
+    1) Defining General Data Type
+
+            template <class template_name1, class template_name2,...>
+
+    2) Defining a function with general data type
+
+            return_type function_name(arguments with template_name1, template_name2 and other)
+            {
+            //body of function with type template
+            }
+
+
+// Overloading of function templates
+C++ function templates can also be overloaded as loke normal functions. In normal C++ function overloading, the function can have different data types as well as different number of parameters, as it can already handle many data types. The overloading of function templates can be explained with following example.
+
+
+//Class Template
+
+A class template is a kind of class which has members of template type. Class templates are associated with generic types and they can use some specific types as well. But each object of sch class must be of some speciifc size. Therefore, the data_type must be specified before creating an object of the template class. This is done by specifying specific data-type as parameter when object is created for the template class. Thus, template classes provide mechanims for creating applications with generic types, which are common applications such as linked lists, stacks, and queues etc. The general format for class template is :
+step1: Defining template
+        template <class T>
+step2: Defining class with members of template type
+        class class_name
+        {
+            //class members with data types T whenever appropriate
+        }
+step3: Defining object
+        class_name <specific_data_type> object_name
+
+
+        //Class Template with multiple parameters(i.e different type of members)
+
+
+We can define a class template with mor than one generic data types. They are declared as comma separated list in template specification as following
+step1 : Defining template
+        template<class T1, class T2 ,... >
+step2 : Defining object
+        class_name <specific_data_type_for_T1,
+        specific_data_type_for_T2,...> object_name;
+
+
+
+//Advantages of Template.
+
+1) Type safety: The templates are more type-safe because their parameters are known at compiler time and strict type checking is don't at compile time itself.
+
+2) Reusability: We use templates in situation that results in duplication of same code for multiple types. For example, we can use function templates to create a set of function that apply the same algorithm to different data types.
+
+3) Performance: Defining and using templates are a compile time mechanism. Because of this, there is no runtime overhead associated with using them.
+
+//Standard Template Library
+The C++ standardTemplate Library is a powerful set of C++ template classes to provide general_purpose template classes and functions that implement many popular and commonly used algorithms and data structures like vectors, lists, queues, and stacks. The C++ standard Template Library contains following main three cmponents.
+1) containers
+2) Algorithms
+3) Iterators
+
+Container
+    Containers are used to manage collection of objects of a certain kind. There are several different types of containers like deque, list, vector, map etc.
+
+Algorithms
+    Algorithms act on containers. They provide means by which we will perform initialization, sorting, searching, and transforming of content of containers.
+
+Iterators
+    Iterators are used to step through elements of collections of objects. These collections may be containers or subsets of containers.
+
+

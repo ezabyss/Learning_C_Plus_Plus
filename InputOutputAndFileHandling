@@ -1,0 +1,93 @@
+1. Stream Based input/output
+
+    Most programs need data for performing its task and takes the data from user as input. Similarly, the computer program produces data as output after some processing. For example, let us consider a program which prepares mark-sheet of students in a school. The marks of individual student in individual subject, name , roll no, class, faculty may be input data to bve read from user and the division or grade, status(i.e pass or fail) may be output data. The input data can be read from input devices like keyboard or data files. similarly, the output data can be displayed in screen or written in a data file. The input/output operations which involve keyboard as input device and screen(i.e. monitor) as output device, are known as console I/O operations. And the input/output  operations which read/write data from/to  data files, are known as File I/O operations. C++ has pre-defined classes and objects fro handling input and output proces.. For example, we use cin object for reading data from keyboard and cout object for writing data in screen. The cin and cout are actually object c++ built-in istream and ostream class respectively.
+
+    Again, we can read data from disk file in progeram and write output data in disk file as input/output process. Thus, reading data from input device or data file and writing data to joutput device or data file is known as input/output process. C++ I/O implements concept of streams, which are sequences of bytes(i.e. flow of data). There are two types of streams.
+
+
+//INPUT STREAM
+
+    it is flow of data bytes from a device (e.g. Keyboard, disk drive , or a network connection etc) to main memory (i.e active program within main memory).
+
+//OURPUT STREAM
+    it is flow of data bytes from main memory(i.e. program) to a device (e.g. display screen, printer,disk drive, or a network connection etc).
+
+    Thus, stream acts as a source from which the input data can be obtained by a program or a destination to which the output data can be sent by the program. The source stream provides data to a program and the destination stream receives output from the program.
+
+//STREAM CLASSES and Their Hierarchy
+
+C++ has a number of stream classes for performing I/O operations. Different stream are used to represent different kinds of data flow. Each stream is associated with a particular stream class,which contains member functions and their definitions for dealing with that particular kind of data flow. These stream classes are declared in the header file iostream.h
+The different stream classes available in C++ are defined in following hierarchical manner.
+
+ios > fstreambase > fstream
+ios > istream > istream_withassign
+      istream > ifstream
+      istream > iostream >iostream_withassign
+
+ios > streambuf
+
+ios > ostream > iostream > iostream_withassign
+      ostream > ofstream
+      ostream > ostream_with assign
+
+fig: stream class hierarchy(stream classes for console I/O operations)
+
+The ios class is base blass of all stream classes and contains  most of stream features. it is the direct base class for the classes: istream, ostream, fstreambase, streambuf. Again, class fstreambase is base class of fstream class, the class istream is base class of classes: istream_withassign, ifstream &iostream, the class ostream is base class of iostream, ofstream, ostream_withassign sand the class iostream is base class of iostream_withassign class. The objectives of the stream classes can be explained as below.
+
+1) ios : it is base class of other stream classes
+
+2) istream: it is child class of ios and has input related functions, data, constants and operators.
+
+3) ostream : it is child class of ios and has output related functions, data constants and operators,
+
+4) fstreambase: It is base class for fstream, ifstream and ofstream classes. It provides common operations to file streams.
+
+5) streambuf: it is base buffer class for streams. The object of this class provides reading and writing functionality to/from certain types of character sequences, such as external files or strings. They are usually associated with one specific character sequence, from which they read and write data through an internal memory buffer. The buffer is an array in memory which is expected to be synchronized when needed with the physical content of the associated character sequence. This is an abstract base class, therefore no objects can be directly instantiated from it.
+
+6) fstream: it provides facilities for input/output operations. It has all functionalities of istream and ostream class.
+
+7) ifstream: It contains input operations in file.
+
+8) iostream: the class is deriveed from both istream and ostream classes. it performs both input and output operations.
+
+9) ofstream: It contains output operations in file.
+
+
+//UNFORMATTED I/O operations
+
+Unformatted operations do not allow user to read or display data in desired format. They read or write output data in default setting and we can't cahnge it according to our choice. The unformatted oprations supported by C++ are:
+1) overloaded operators>> and <<
+2) put() and get() function
+3) getline() and write() function
+
+1. OVERLOADED OPERATORS >> and <<
+        The insertion operator(i.e<<) and extraction operator(i.e. >>) are overloaded operators which are used for reading/writing data from/to input/output devices. The are used for unformatted I/O operations. The predefined object cout is an instance/object of ostream class. The cout object is said to be connected to the standard ioutput device (i.e. screen). The cout is used in conjuction with the stream insertion (i.e. <<). The C++ compiler also determines the data type of variable to be output and selects the appropriate stream insertion operator to display the value. The << operator is overloaded to output data items of built-in types integer, float , double, strings and pointer values. The syntax for the overloaded insertion or put to operator to display the output on screen as follows:
+        cout<< message or variable<<.... << message or variableN;
+
+        The insertion operator(i.e. <<) may be used more than once in a single statement as shown above.
+
+        Similarly, The predefined  object cin is an instance /object of istream class. The cin object is said to be attached to the standard input device (i.e keyboard.). The cin is used in conjunction  with the stream extraction operator(i.e >>). The C++ compiler also determines the data type of the entered value and selects the approprate stream extraction operator to extract the value and store it in the given variables. The syntax to input data using extraction operator is as follows:
+
+    cin>>variable_name;
+
+    The stream extraction operator may be used more than once in a single statement.
+
+    cin>> variable1 >> variable2>> ... >> variableN;
+
+
+// FORMATTED CONSOLE I/O operations
+/*
+    Formatted operations allow the input read from the keyboard or the output displayed on screen  to be formatted according to ur requirements. For example, the number of digits to be displayed after decimal point, field width and alignment in output data can be set according to our choice and requirement. C++ supports a number of features that could be used for formatting the output. These features are:
+    1) Member functions of ios class and flags
+    2) Manipulators
+    3) User-defined manipulator
+*/
+//MEMBER FUNCTIONS OF IOS CLASS and FLAGS
+
+The ios class contains a large number of member functions that would help us to format the output in a number of ways. The most important ones among them are as follows :
+
+a. width()
+        The member function width() is used to define necessary  field width for output of data item. It is same as field width in printf() function in C. Since, it is a member function of ios class, we use an object of ios class to invoke it.
+        cout.width(w);
+
+    where w is field width (number of columns). The output will be printed such that the data item will occupy w characters. If there are fewer characters in data items than w, the required number of spaces is preceded. After printing one data item, it will revert to the default.

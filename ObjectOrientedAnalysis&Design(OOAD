@@ -1,0 +1,397 @@
+//Introduction
+
+Object_oriented Analysis and Design (OOAD) is  a software engineering approach that models and designs as system as a group of interacting objects. Before writing programs using Object Oriented Programming language, we have to design the system. The object is basic component of OOAD. Object is term used to describe some ntity or thing of  interest in system being modeled. The object is characterized  by its class, state, and behavior. Various models can be developed to show static structure, dynamic behavior, and run-time deployment of these collaborating objects. Objects have attributes wich can be set to specific values which define the state of the object. Objects also have methods or functions which define their behavior.
+
+Let use consider an example of a real object CAr which may have attributes that can be defined with specific values such as
+
+Manufacturer = ford
+Model = escape
+Year Made = 2002
+color = green
+Maximum speed = 130 mph
+Fuel Capacity = 60 liters
+
+
+Each of these attributes defines the state of a vehicle. They describe the Car as it is at some point in time. Additionally, the Car has certain behaviors or function such as
+Accelerate()
+Decelerate()
+Refuel()
+FillTires()
+
+Each of these behaviors of the real world object cna be represented as a method of the object when designing the system. These methods can change the values of attributes causing a change in state.
+
+In process of OOAD, we analyze each and every object, their states or attributes  and operations and design the system to show each and every entity of the system. OOAD consists of following two parts:
+
+a) Object-Oriented Analysis(OOA)
+b) Object Oriented Design (OOD)
+
+During the Object- Oriented Analysis(OOA) phase, object-modeling techniqu3es are used to analyze the functional requirements for a suystem and create models which reflect the logical design of the system. During the Object-Oriented Design(OOD) phase of the system, models are elaborated to include implementation specific details that hsow how the physical design of the system will come together. OOA focuses on what the sytem does(its static structure and behavior), OOD on how the system does it(It is run-time implementation.)
+
+//Class Responsibilities and Collaborator(CRC) Card
+
+The CRC card is used to represent the respnosibilities (i.e. knowing and doing activities) of a class and the interaction with other classes. CRc card is a useful and ppopular tecnique for Objct Oriented paradigm. The CRC card is created in informal brainstorming sessions of system analysis and design, wherein functins of the applications to be modeled are simulated and the outcome is recorded on the card. CRC card is not a formal part of UML, but is commonly used as a tool for doing design that is then documented using UML diagrams. The system Analysts create CRC cards in follwing process
+
+* Identify classes.
+* Identify responsibilities of each class.
+* Assign responsibilities to classes.
+* Identify collaborations.
+* Collect responsibilities into contracts.
+* Define protocols for Contracts
+
+A CRC card is a cart that contains name of class at the top, followed by two lists. The list on the left hand side lists the responsibilities of the class and the list on the right hand side lists the other classes (if any ) with which this class must collaborate to carry out its task. Thus, it contains three components: class, Responsibilities and Collaborators. It is created with following format.
+
+                Class_Name
+ -----------------------------------------
+ Responsibility         Collaborator
+
+
+ //Class
+    A class is blue print to represent objects of similar characteristics. They may be a person, place, thing or any other entity. The name of the class is written in the top of CRC card.
+
+//Responsibility
+    A Responsibility is anything that a class knws or does. For example, a class Employee might have knowledge for its data members: id, name, address, phone and salary and it may perform actions like Read Data, Calculate Salary, and Display Data. thus, they are responsibilities of the class.
+
+//Collaborator
+    A Collaborator is another class that is used to interact with a class. Collaborator for a class is also a class which helps to perform first class's actions. The collaborators of a class appear along the right side of the CRC card.
+
+    EG:
+                     STUDENT
+    ----------------------------------------------
+      Responsibilities           |  Collaborators
+    -----------------------------|----------------
+        RollNo                   |  Seminar
+        Name                     |
+        Address                  |
+        Enroll Seminar           |
+        Drop Seminar             |
+        Request for Transcript   |
+    ________________________________________________
+       Fig : CRC card for class Student
+
+
+//Advantages of CRC Card
+    * Simple and no need of specialized knowledge & tool
+    * Tool  for Group interactions and help to develop participant's creativeness that facilitates the brainstorming of good solutions.
+    * Emphasizes the division of responsibilities across objects.
+    * Encourages and intuitive understanding of the model
+    * The cards capture the essential aspects of the design: classes, responsibilities, and the patterns of interactions.
+    * Inexpensive, portable, flexible, and readily available
+
+
+// Unified Modeling Language(UML)
+
+UML is a standard language for specifying, visualizing, constructing, documenting the artifacts of software systems. The Unified Modeling Language(UML) is a standard widely adopted graphical language that describes the artifacts of software systems with a focus on conceptual and physical representations. it provides details of the structural and behavioral aspects o a software system through the various veiws offered by UML. It is proprietary and language independent so that it may be used in any number of development environments. UML was created by object Management Group(OMG) and UML 1.0 specification draft was proposed to the OMG in January 1997. The Object Management Group (OMG)  is the body  responsible for creating and maintaining  the language specifications.
+
+So, UML can be described as a general purpose visual modeling language to visualize, specify, construct and document software system. Although UML is generally uset to model software systems but it is not limited within this boundary. It is also used to model non-software systems as well like process flow in a manufacturing unit. UML is not a programming language but tool scan be used to generate code in various languages using UML diagram. UML has a direct relation with object oriented analysis and design. After some standardization, UML has been become anOMG (object Management Group) standard. There are several versions of UML notations developed by OMG. Currently, UML 2.x is being used.
+
+//Why UML
+
+The "a picture is worth a thousand words" is absolutely suitable in UML. Object oriented concepts were introduced much earlier than UML. So, at that time there were no standard methodologies to organize and consolidate the object oriented development. At that point of time, UML came into picture. There are a number of goals for developing UML but he most important is to define some general purpose modeling language which all modelers can use and also it needs to be made simple to understand and use. UML diagrams are not only made for Developers but also for business users, comon people and anybody inerested to understand the system. The system can be a software or non software. The goal of UML can be defined as a simple modeling mechanism to model all possible practical systems in today's complex Environment. The Goal of UML can be summarized as follows:
+
+1) Provide users with a ready-to-use, expressive visual modeling language for the development of a  system.
+2) provide mechanisms for extensibility and specialization in order to extend the central concepts
+3) Provide mechanism to be independent from specific programming languages and development processes
+4) Provide a formal foundation for understanding the modeling language.
+5) Encourage further development in the OO tools market
+6) Support higher-level development concepts including collaborations, frame works, patterns, and components
+7) Integrate best practices and define standards.
+
+// Advantage of UML
+1) It is useful method for visualization and documenting software system design
+2) it uses OOAD concept and independent of specific programming language.
+3) It can be used for business process modeling and requirement modeling.
+4) It is standard and helps to make design uniform and efficient.
+
+// Limitations of UML
+
+1) It has no specification for modeling user interface
+2) It is not strong capable for design of distributed system
+3) It can't be implemented directly in the target programming language
+
+// Types of UML Diagrams
+
+1) class Diagram
+2) object Diagram
+3) Use Case Diagram
+4) Component Diagram
+5) Deployment Diagram
+
+b) Dynamic Diagram
+
+i) Interaction Diagrams
+    1) Sequence Diagram
+    2) Collaboration Diagram
+
+ii) State Machine Diagram
+    1) State Diagram
+    2) Activity Diagram
+
+//Class Diagram
+
+The class diagram is a static diagram. It represents the static view of a program. Class diagram is not only used for visualizing, describing and documenting different aspects of  system but also for constructing executable code of the software application. The class diagram describes the attributes and oeprations of a class. These diagrams are widely used in he modeling of object oriented systems because they are the only UML diagrams which can be maped directly with object oriented languages. The class diagram shows a collection of classes, interfaces, associations, collaborations and constraints. It is also knwn as a structural diagram.
+
+The class diagram is used to
+* Describe the static view of the system.
+* show the collaboration among the elements of the static view.
+* Describe the functionalities performed by the system.
+* Construct software applications using object oriented language.
+
+A class is represented by a rectangular box with three compartments. class nam at the top, attributes in the middle and operations or methods at the bottom compartment.
+         ---------------
+        |  Class Name   |
+        |---------------|
+        |   Attributes  |
+        |---------------|
+        |   Methods     |
+        -----------------
+        Fig: Notation  for class Diagram
+
+Example : The calss diagram of a class Customer having private ata members: ID, Name & Address and public function members: AddCustomer(), EditCustomer(), SearchCustomer() & DisplayData() can be represented as Edit Customer(), SearchCustomer() & DispalyData() can be represented as follows.
+
+            |--------------------=|
+            |      Customer       |
+            |---------------------|
+            |   - ID: int         |
+            |   = Name : string   |
+            |   - Address: String |
+            |_____________________|
+            |                     |
+            |   +AddCustomer()    |
+            |   +EditCustomer()   |
+            |   +SearchCustomer() |
+            |   +DisplayData()    |
+            |_____________________|
+
+            Fig. Class Diagram for class Customer
+
+In class diagram, the minus(i.e - ) sign before members indicates that the members are private and plus(i.e. + ) sign indicates that the members are public. Similarly, the Symbol # signal is used to represent protected member
+
+There are four primary inter-object relationships: dependency, association, aggregation and composition.
+
+1) Dependency
+
+It is a relationship between two classes in which change in one class will affect the other class.
+
+    Dependent class ------------> Independent class
+
+    | Data Acess  |             |  Connection Pool |
+    |-------------|             |------------------|
+    |             |------------>                   |
+    |_____________|             |------------------|
+    |_____________|             |__________________|
+
+    Fig: Class Data Access Depends on another class connection Pool
+
+
+2) Association
+
+    It describes how the classes in UML diagram are associated or linked with each other In other word, It describes how many classes are talking art in an interaction.
+
+
+      |     Person          |                    |   Company          |
+      |_____________________|                    |____________________|
+      |  - ID: int          |                    | - CName: String    |
+      |  - Name: String     |                    | - Type: Number     |
+      |  - Address : String |           Employer | = Location: String |
+      |_____________________|------------------->|____________________|
+      |  +AddPerson()       |Employee            |                    |
+      |  +EditPerson()      |                    | -AddEmployee()     |
+      |  +SearchPerson()    |                    | -DisplayResult()   |
+      |  +DisplayPerson()   |                    |____________________|
+      |_____________________|
+
+                Fig: Class Person is associated with class Company
+
+
+3) Inheritance
+         The inheritance relationship in UML is depicted by a peculiar triangular arrowhead.
+         this type of  relationship  is also known as Generalization which says that one class may have more related classes. The main class is the super class while the related classes are the subtypes (subclasses.)
+
+
+
+                        |--------------------=|
+                        |     Person          |
+                        |---------------------|
+                        |   - ID: int         |
+                        |   = Name : string   |
+                        |   - Address: String |
+                        |_____________________|
+                        |                     |
+                        |   +AddCustomer()    |
+                        |   +EditCustomer()   |
+                        |   +SearchCustomer() |
+                        |   +DisplayData()    |
+                        |_____________________|
+                                  |
+                                  |
+                __________________|________________________
+                |                                         |
+                |                                         |
+                |                                         |
+      |---------------------|                    |--------|-----------|
+      |     Person          |                    |   Company          |
+      |_____________________|                    |____________________|
+      |  - ID: int          |                    | - CName: String    |
+      |  - Name: String     |                    | - Type: Number     |
+      |  - Address : String |                    | - Location: String |
+      |_____________________|                    |____________________|
+      |  +AddPerson()       |                    |                    |
+      |  +EditPerson()      |                    | -AddEmployee()     |
+      |  +SearchPerson()    |                    | -DisplayResult()   |
+      |  +DisplayPerson()   |                    |____________________|
+      |_____________________|
+
+
+      Fig: Generalization-specialization relationship between classes Person, Student and Employee
+
+
+      The multiplicity of the association denotes the number of object that can participate in the relationship. EG. an employee will update one task, but the task is updated by multiple employee. The common multiplicities are (o...1,1,0..*,1..*
+
+
+4) Aggregation
+
+    Aggregation is" has a " relationship between two classes. The aggregation is more specific than association relationship. It is an association that represents a part-whole or part-of relationship. As a type of association, an aggregation can be named and have the same adornments that an association have. In UML, it is graphically represented as a hollow diamond shape of n the containing class at the end of the line that connects contained class to the containing class
+
+      |     Person          |                    |   Company          |
+      |_____________________|                    |____________________|
+      |  - ID: int          |                    | - CName: String    |
+      |  - Name: String     |                    | - Type: Number     |
+      |  - Address : String |* *----------------| = Location: String |
+      |_____________________|                    |____________________|
+      |  +AddPerson()       |                    |                    |
+      |  +EditPerson()      |                    | -AddEmployee()     |
+      |  +SearchPerson()    |                    | -DisplayResult()   |
+      |  +DisplayPerson()   |                    |____________________|
+      |_____________________|
+
+       Note: ' * * ' mean picture of diamond not filled
+      Fig: company consists of Department(i.e Aggregation Relationship)
+
+
+5) Composition
+            Composition  is a "Owns a " relationship. It is more specific that aggregation. Composition usually has a strong life cycle dependency between instances of the container class and instances of the contained class. If the container is destroyed, normally every nistance that it contains is destroyed as well. Wit composition , an arrow points to the contained class and the black diamond points towards the container class.
+            The UML graphical representation of a composition relationship is a filled diamond shape on the containing class at the end of the line that connects contained class to the containing class.
+
+      |---------------------|                 1.1|--------------------|
+      |        Car          |***-----------------|    Carburetor      |
+      |_____________________| 0.1                |____________________|
+
+      Note : ' *** ' mean Picture of Diamond (Filled)
+      Fig: Composition(i.e Car owns carburetor).
+
+
+
+
+
+
+===============================================================================
+      |----= College -------|                    |      Department    |
+      |_____________________|                    |____________________|
+      |                     |                    |                    |
+      |  - Name: String     |                    | - DName: String    |
+      |  - Address : String | *** ---------------| - Location: String |
+      |_____________________|                    |____________________|
+      |  +AddPerson()       |                    |                    |
+      |  +EditPerson()      |                    |                    |
+      |  +SearchPerson()    |       |------- * * |                    |
+      |  +DisplayPerson()   |       |            |____________________|
+      |_____________________|       |                      * *
+                                    |                       |
+                                    |                       |____________
+                                    |                                    |
+                                    |                                    |
+                     _______________|                                    |
+                     |                   |----------------=|             |
+                     |                   |  Person         |             |
+                     |                   |-----------------|             |
+                     |                   | Name : string   |             |
+                     |                   | Address: String |             |
+                     |                   |_________________|             |
+                     |                   |                 |             |
+                     |                   |_________________|             |
+                     |          __________________* *____________        |
+                     |         |                                 |       |
+                     |         |                                 |       |
+                     |         |                                 |       |
+                     |         |                                 |       |
+                     |         |                                 |       |
+                  |---------------------|                    |-----------|--------|
+                  |     Student         |                    |       Lecturer     |
+                  |_____________________|                    |____________________|
+                  |                     |                    |                    |
+                  |  - Name: String     |                    | - Name: String     |              |
+                  |  - RollNo: String   |                    | - Location: String |
+                  |_____________________|                    |____________________|
+                  |                     |                    |____________________|
+                  |_____________________|                              1|
+                         |                                              |
+                         |                                              |
+                         |                                              |
+                         |                                              |
+                         |                                              |
+                         |                                              |
+                         |              |---------------------|         |
+                         |              |    SUBJECT          |         |
+                         |              |---------------------|         |
+                         |              | SubName : string    |         |
+                         ---------------| SubCategory: String |----------
+                                        |_____________________|1
+                                        |                     |
+                                        |_____________________|
+
+                        Fig: class Diagram for college Management system
+
+
+// Object Diagram
+
+Object diagram represents an instance of a class diagram. It also represents the static view of a system as class diagram but this static view is a snapshot of the system at a particular moment. Thus, the value of data members of the class at particular moment is shown in object diagram. The difference in class diagram and object diagram is that a class diagram represents an abstract model consisting of classes and their relationships but an object diagram represents an instance at a particular moment which is concrete in nature. It means the object diagram is more close to the actual system behavior.
+
+Object diagram consists of objects. The link in object diagram is used to connect objects. Objects and links are the two elements used to construct an object diagram. Values of different elements need to be captured to include in the object diagram. Th3e object in object diagram is shown as following symbol.
+
+                                         |------------------------|
+                                         | object_name:class_name |
+                                         |------------------------|
+                                         | data_member1 : value   |
+                                         | data_member2 : value   |
+                                         |________________________|
+
+                                         Fig: Notation for object
+
+                                                                                                                               |------------------------|
+                             |      S1: Student       |
+                             |------------------------|
+                             | RollNo  : 10           |
+                             | Name    : Ram          |
+                             | Address : Kathmandu    |
+                             |________________________|
+                                          |
+                                          |
+                    ______________________|_______________
+                    |                                    |
+                    |                                    |
+                    |                                    |
+      |---------------------|                    |--------------------|
+      |----Sub1: Subject----|                    |---Sub1:Subject-----|
+      |_____________________|                    |____________________|
+      |  - SubjectName: C++ |                    | SubjectName : DBMS |
+      |  - FullMarks : 80   |                    | FullMarks   : 100  |
+      |  - PassMarks : 32   |                    | PassMarks   : 40   |
+      |_____________________|                    |____________________|
+                |                                          |
+                |                                          |
+                |                                          |
+      |---------------------|                    |--------------------|
+      |----Sub1: Subject----|                    |---Sub1:Subject-----|
+      |_____________________|                    |____________________|
+      |   Mark :70          |                    |   Mark : 89        |
+      |_____________________|                    |____________________|
+
+                    Fig:  Object Diagram
+
+// The Object Diagram is Used For:
+* Making the prototype of a system
+* Modeling complex data structures.
+* Understanding the system from practical perspective.
+
+
+
